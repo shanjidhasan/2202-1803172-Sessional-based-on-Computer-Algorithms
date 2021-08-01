@@ -1,4 +1,4 @@
-Course Name: **Sessional based on Computer Algorithms.**
+# Course Name: **Sessional based on Computer Algorithms.**
 
 Course Code: 2202
 
