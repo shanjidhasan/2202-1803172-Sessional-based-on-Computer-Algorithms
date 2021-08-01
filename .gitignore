@@ -1,0 +1,9 @@
+*.o
+*.exe
+*.txt
+*.docx
+*.zip
+*.xlsx
+*.jpg
+*.png
+*test.cpp
