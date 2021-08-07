@@ -1,9 +1,5 @@
 #include <bits/stdc++.h>
-using std::cerr;
-using std::endl;
-#include <fstream>
-using std::ofstream;
-#include <cstdlib>
+using namespace std;
 int main()
 {
     ofstream outdata;
@@ -53,6 +49,7 @@ int main()
     }
 
     outdata.close();
+    cout<<"Output Generated"<<endl;
 
     return 0;
 }

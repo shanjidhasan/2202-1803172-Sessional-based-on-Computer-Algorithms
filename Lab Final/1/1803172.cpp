@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using namespace std::chrono;
-long long ar[100010],i,j,k,len,spaceCnt1 = 0,CompCnt = 0;
+long long ar[100010],i,j,k,len,CompCnt = 0;
 void readFile(string fname)
 {
     int x,i=0;
@@ -22,8 +22,6 @@ void readFile(string fname)
 void merge_array(long long arr[], long long left, long long middle, long long right)
 {
     long long left_array[middle - left+1], right_array[right - middle];
-    spaceCnt1+=sizeof(left_array);
-    spaceCnt1+=sizeof(right_array);
     for (i = 0; i <= middle - left; i++)
     {
         left_array[i] = arr[left + i];
@@ -101,12 +99,8 @@ void quickSort(long long arr[], long long low, long long high)
 
 int main()
 {
-    int output = 0;
-    string s = "";
-
     readFile("quick1.txt");
-    CompCnt = 0; spaceCnt1 = 0;
-    spaceCnt1 = len * sizeof(long long);
+    CompCnt = 0;
     high_resolution_clock::time_point sratt_time = high_resolution_clock::now();
     mergeSort(ar,0,len-1);
     high_resolution_clock::time_point end_time = high_resolution_clock::now();
@@ -118,8 +112,7 @@ int main()
 
 
     readFile("quick1.txt");
-    CompCnt = 0; spaceCnt1 = 0;
-    spaceCnt1 = len * sizeof(long long);
+    CompCnt = 0;
     high_resolution_clock::time_point sratt_time1 = high_resolution_clock::now();
     quickSort(ar,0,len-1);
     high_resolution_clock::time_point end_time1 = high_resolution_clock::now();
@@ -129,14 +122,11 @@ int main()
     cout<<"            Time required  : "<<time_span1.count()*1000<<"ms"<<endl;
     cout<<"      Number of comparison : "<<CompCnt<<endl;
 
-    s = "Output_" + std::to_string(output) + ".txt";
-    output++;
 
     cout<<endl<<endl;
 
     readFile("quick2.txt");
-    CompCnt = 0; spaceCnt1 = 0;
-    spaceCnt1 = len * sizeof(long long);
+    CompCnt = 0;
     high_resolution_clock::time_point sratt_time2 = high_resolution_clock::now();
     mergeSort(ar,0,len-1);
     high_resolution_clock::time_point end_time2 = high_resolution_clock::now();
@@ -146,13 +136,9 @@ int main()
     cout<<"            Time required  : "<<time_span2.count()*1000<<"ms"<<endl;
     cout<<"      Number of comparison : "<<CompCnt<<endl;
 
-    s = "Output_" + std::to_string(output) + ".txt";
-    output++;
-
 
     readFile("quick2.txt");
-    CompCnt = 0; spaceCnt1 = 0;
-    spaceCnt1 = len * sizeof(long long);
+    CompCnt = 0;
     high_resolution_clock::time_point sratt_time3 = high_resolution_clock::now();
     quickSort(ar,0,len-1);
     high_resolution_clock::time_point end_time3 = high_resolution_clock::now();
@@ -162,14 +148,11 @@ int main()
     cout<<"            Time required  : "<<time_span3.count()*1000<<"ms"<<endl;
     cout<<"      Number of comparison : "<<CompCnt<<endl;
 
-    s = "Output_" + std::to_string(output) + ".txt";
-    output++;
 
     cout<<endl<<endl;
 
     readFile("quick3.txt");
-    CompCnt = 0; spaceCnt1 = 0;
-    spaceCnt1 = len * sizeof(long long);
+    CompCnt = 0;
     high_resolution_clock::time_point sratt_time4 = high_resolution_clock::now();
     mergeSort(ar,0,len-1);
     high_resolution_clock::time_point end_time4 = high_resolution_clock::now();
@@ -179,12 +162,9 @@ int main()
     cout<<"            Time required  : "<<time_span4.count()*1000<<"ms"<<endl;
     cout<<"      Number of comparison : "<<CompCnt<<endl;
 
-    s = "Output_" + std::to_string(output) + ".txt";
-    output++;
-
 
     readFile("quick3.txt");
-    CompCnt = 0; spaceCnt1 = 0;
+    CompCnt = 0;
     high_resolution_clock::time_point sratt_time5 = high_resolution_clock::now();
     quickSort(ar,0,len-1);
     high_resolution_clock::time_point end_time5 = high_resolution_clock::now();
@@ -194,8 +174,6 @@ int main()
     cout<<"            Time required  : "<<time_span5.count()*1000<<"ms"<<endl;
     cout<<"      Number of comparison : "<<CompCnt<<endl;
 
-    s = "Output_" + std::to_string(output) + ".txt";
-    output++;
 
     cout<<endl<<endl;
 
